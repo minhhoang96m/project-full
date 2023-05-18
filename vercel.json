@@ -4,7 +4,7 @@
         "use": "@vercel/node",
         "config": {
           "prisma": {
-            "generate": "npm run prisma:generate"
+            "generate": "yarn prisma generate"
           }
         }
       }
