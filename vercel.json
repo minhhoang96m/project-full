@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "use": "@vercel/node",
+        "config": {
+          "prisma": {
+            "generate": "npm run prisma:generate"
+          }
+        }
+      }
+    ],
+    "version": 2
+  }
+  
