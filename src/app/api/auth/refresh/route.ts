@@ -25,9 +25,9 @@ export const POST = async (request: Request, response: Response) => {
             return new Response(JSON.stringify(result))
         }
     }
-    //  else return new Response(JSON.stringify({
-    //         status: 401,
-    //         error: true
-    //     }))
-    else return response.status
+     else return new Response(JSON.stringify({
+            status: 401,
+            error: true
+        }))
+    // else return response.status
 }

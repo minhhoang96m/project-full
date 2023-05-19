@@ -8,7 +8,7 @@ export const useRefreshToken = () => {
 
   const refreshToken = async () => {
     const res = await axios.post("/auth/refresh", {
-      refresh: session?.user?.refresh_Token,
+      refresh: session?.user?.refresh_token,
     });
 
     if (session) session.user.access_token = res.data.access_token;

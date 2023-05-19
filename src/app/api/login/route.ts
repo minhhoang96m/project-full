@@ -20,10 +20,7 @@ export const POST = async (request: Request) => {
         const {password, ...userWithoutPass} = user
         const access_token = signJwtAccessToken(userWithoutPass)
         const refresh_token = signJwtRefreshToken(userWithoutPass)
-        await prisma.user.update({
-            where: {
-                email: body.username,
-            },
+        await prisma.user.create({
             data: {refresh_token:refresh_token}
         })
         const result = {

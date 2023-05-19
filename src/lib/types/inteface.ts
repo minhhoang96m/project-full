@@ -5,8 +5,7 @@ export interface User {
     email?: string
     role?: string
     userName?: string
+    refresh_token?: string
     access_token?: string
-    refresh_Token?: string
-    access_Token?: string
     user?: string
 }
